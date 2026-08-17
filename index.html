@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Runda Health clinical AI presentation: governed context, useful clinical agents, and measurable proof.">
+  <meta name="theme-color" content="#edf2f0">
+  <link rel="icon" href="./assets/runda-health.png" type="image/png">
+  <link rel="stylesheet" href="./styles/story-deck.css?v=20260806-01">
+  <link rel="stylesheet" href="./styles/atlas-matrix.css?v=20260810-09">
+  <link rel="stylesheet" href="./styles/hybrid-deck.css?v=20260810-03">
+  <title>Runda Health | Clinical AI, made reviewable</title>
+</head>
+<body>
+  <a class="skip-link" href="#deckStage">Skip to the presentation</a>
+
+  <div class="deck-viewport">
+    <main class="deck-stage" id="deckStage" aria-live="polite">
+      <div class="deck-brand-mark" aria-label="Runda Health"><img src="./assets/runda-health.png" alt="Runda Health"></div>
+
+      <section class="slide slide--light slide--opening active visible" data-page="1" data-label="Customer context" aria-label="Customer context" aria-hidden="false">
+        <div class="opening-copy" data-animate="copy">
+          <p class="eyebrow eyebrow--coral">01 / Customer context</p>
+          <h1>Where is scarce clinical time being <em>lost today?</em></h1>
+          <p>Documentation. Fragmented data. Repeated intake. Late quality checks. Each one reduces time available for care.</p>
+        </div>
+      </section>
+
+      <section class="slide slide--light slide--outcome" data-page="2" data-label="West China outcome" aria-label="West China Hospital outcome" aria-hidden="true">
+        <div class="outcome-copy" data-animate="copy">
+          <p class="eyebrow eyebrow--blue">02 / west china outcome</p>
+          <h1>Make time visible <em>at scale.</em></h1>
+          <p>At West China Hospital, documentation AI supported a 4,900-bed clinical operation.</p>
+        </div>
+        <aside class="outcome-impact" aria-label="West China Hospital documentation AI impact">
+          <strong>15,584</strong>
+          <span>clinician documentation hours saved</span>
+          <small>in one reported week</small>
+        </aside>
+      </section>
+
+      <section class="slide slide--hybrid slide--why-v1" data-page="3" data-label="Why Runda" aria-label="Runda company strength" aria-hidden="true">
+        <div class="why-v1-layout">
+          <header class="hybrid-copy hybrid-copy--why" data-animate="copy">
+            <p class="eyebrow">03-1 / why Runda · company strength</p>
+            <h1>Healthcare depth.<br><em>Delivery at scale.</em></h1>
+            <p>Runda combines deep healthcare experience, a nationwide delivery footprint, and one accountable team from product to implementation.</p>
+          </header>
+          <section class="company-strength-v1" data-animate="visual" aria-label="Runda company strength metrics">
+            <div class="company-strength-lead">
+              <strong>27</strong>
+              <span>years<br>in healthcare</span>
+            </div>
+            <div class="company-strength-grid">
+              <article><strong>4,000+</strong><span>healthcare institutions served</span></article>
+              <article><strong>300+</strong><span>AI and smart-hospital sites</span></article>
+              <article><strong>One team</strong><span>from product and integration to hospital delivery</span></article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="slide slide--cdx-original" data-page="4" data-label="CDx white-box evidence" aria-label="03-2 Why Runda CDx white-box evidence" aria-hidden="true">
+        <div class="cdx-native">
+          <header class="cdx-native__head" data-animate="copy">
+            <div>
+              <p class="eyebrow">03-2 / WHY RUNDA · CDx</p>
+              <h1>Traceability, made <strong>visible.</strong></h1>
+              <p>Original clinical text becomes computable data through inspectable perception, mapping and deterministic rules.</p>
+            </div>
+            <div class="cdx-native__metrics" aria-label="CDx evidence metrics">
+              <div class="cdx-native__metric"><b>10B+</b><span>Governed data volume</span></div>
+              <div class="cdx-native__metric"><b>100K+</b><span>Medical cleaning rules</span></div>
+              <div class="cdx-native__metric"><b>&ge;95%</b><span>Field extraction accuracy</span></div>
+            </div>
+          </header>
+
+          <section class="cdx-native__flow" data-animate="visual" aria-label="CDx traceable evidence chain">
+            <header class="cdx-native__flow-head"><b>From original text to governed output</b><span>Visible / Traceable / Clinician controlled</span></header>
+            <div class="cdx-native__grid">
+              <article class="cdx-native__stage cdx-native__stage--input">
+                <div class="cdx-native__label"><span>01 / Input</span><i></i></div>
+                <h2>Original data</h2>
+                <p>Free text stays connected to source context.</p>
+                <div class="cdx-native__raw">Patient reports <mark>chest pressure</mark> after exertion. Prior note mentions elevated blood pressure. Lab result imported from source system.</div>
+              </article>
+              <div class="cdx-native__connector" aria-hidden="true"></div>
+              <article class="cdx-native__stage">
+                <div class="cdx-native__label"><span>02 / Structure</span><i></i></div>
+                <h2>Atomic variable matrix</h2>
+                <p>Granular facts make narrative data computable.</p>
+                <div class="cdx-native__matrix"><div><span>Site</span><b>Chest</b></div><div><span>Feature</span><b>Symptom</b></div><div><span>Value</span><b>Pressure on exertion</b></div><div><span>Unit</span><b>Narrative term</b></div></div>
+              </article>
+              <div class="cdx-native__connector" aria-hidden="true"></div>
+              <article class="cdx-native__stage cdx-native__stage--engine">
+                <div class="cdx-native__label"><span>03 / White-box engine</span><i></i></div>
+                <h2>Three visible layers</h2>
+                <p>Each transformation remains separate and inspectable.</p>
+                <div class="cdx-native__layers">
+                  <div class="cdx-native__layer"><span>L1</span><strong>Perception<small>Runda LLM 14B</small></strong><p>Parses text into atomic variables.</p></div>
+                  <div class="cdx-native__layer"><span>L2</span><strong>Mapping<small>LLM 7B + Ontology</small></strong><p>Aligns facts with medical standards.</p></div>
+                  <div class="cdx-native__layer"><span>L3</span><strong>Reasoning<small>Visual rule engine</small></strong><p>Applies deterministic, auditable logic.</p></div>
+                </div>
+              </article>
+              <div class="cdx-native__connector" aria-hidden="true"></div>
+              <article class="cdx-native__stage cdx-native__stage--output">
+                <div class="cdx-native__label"><span>04 / Output</span><i></i></div>
+                <h2>Governed recommendation</h2>
+                <p>Every output carries its evidence chain.</p>
+                <div class="cdx-native__recommendation"><strong>Prioritize clinical review</strong><ul><li>Relevant facts summarized</li><li>Applied logic visible</li><li>Clinician decides</li></ul><div class="cdx-native__trace"><span>Source</span><span>Time</span><span>Rule</span></div></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="cdx-native__uses" data-animate="metrics" aria-label="CDx application areas">
+            <div class="cdx-native__uses-title"><b>One governed foundation</b><span>Four uses</span></div>
+            <div><b>For AI</b><span>Clean variable matrices</span></div>
+            <div><b>For research</b><span>Traceable cohort data</span></div>
+            <div><b>For quality control</b><span>Visible rule engines</span></div>
+            <div><b>For interoperability</b><span>Mapped medical ontologies</span></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="slide slide--atlas" data-page="5" data-label="Seven clinical jobs" aria-label="Seven clinical AI agents" aria-hidden="true">
+        <div class="atlas-matrix" data-atlas-matrix data-family="before">
+          <header class="stage-toolbar"><div class="chapter-marker"><span data-atlas-chapter-number>01</span><p><strong data-atlas-chapter-short>Before the visit</strong><small data-atlas-chapter-count>2 clinical agents</small></p></div><div class="stage-actions"><p>Patient journey</p><button type="button" data-atlas-chapter-step="previous" aria-label="Previous chapter" disabled>&larr;</button><button type="button" data-atlas-chapter-step="next" aria-label="Next chapter">&rarr;</button></div></header>
+          <div class="stage-body" data-atlas-stage-body aria-live="polite"><div class="chapter-copy"><p class="chapter-eyebrow" data-atlas-family-eyebrow>Clinical agent applications</p><h1 id="atlas-chapter-title" data-atlas-family-title>Understand the patient before the visit begins.</h1><p class="chapter-description" data-atlas-family-description>Ask the right questions early and keep screening and follow-up connected.</p><div class="product-selector" role="tablist" aria-label="Products in this chapter" data-atlas-product-selector></div></div><article class="product-showcase" data-atlas-product-showcase aria-labelledby="atlas-product-title"><div class="showcase-head"><p><span data-atlas-product-type>Ask before the visit</span><small data-atlas-product-position>01 / 02</small></p><span class="review-label">Clinician review</span></div><div class="showcase-copy"><h2 id="atlas-product-title" data-atlas-product-title>AI Pre-Consultation</h2><p data-atlas-product-summary>Asks adaptive questions before the visit, then gives the clinician a structured summary.</p></div><div class="showcase-visual" data-atlas-product-visual><figure class="product-media"><img src="./assets/meeting-media/atlas-ai-pre-consultation.jpg" alt="AI Pre-Consultation interface"><figcaption>A guided conversation that becomes clearer with each answer.</figcaption></figure></div><dl class="clinical-flow"><div><dt>Input</dt><dd data-atlas-product-input>What the patient says and approved history</dd></div><div><dt>Intelligence</dt><dd data-atlas-product-intelligence>Asks the next useful question</dd></div><div><dt>Clinical value</dt><dd data-atlas-product-value>A clear summary before the visit</dd></div></dl></article></div>
+          <nav class="chapter-navigation" aria-label="Clinical AI application chapters"><div class="chapter-tabs" role="tablist"><button class="chapter-tab is-active" type="button" role="tab" aria-selected="true" data-atlas-family-tab="before"><span>01</span><strong>Before the visit</strong><small>2 agents</small></button><button class="chapter-tab" type="button" role="tab" aria-selected="false" data-atlas-family-tab="during"><span>02</span><strong>During care</strong><small>4 agents</small></button><button class="chapter-tab" type="button" role="tab" aria-selected="false" data-atlas-family-tab="after"><span>03</span><strong>After discharge</strong><small>1 agent</small></button></div></nav>
+        </div>
+      </section>
+
+      <section class="slide slide--hybrid slide--live-demo-v1" data-page="6" data-label="Selected agent proof" aria-label="AI Pre-Consultation product proof" aria-hidden="true" data-agent-demo>
+        <div class="demo-frame-v1" data-animate="visual"><div class="demo-story-v1"><p class="eyebrow" data-demo-eyebrow>06 / selected agent · AI Pre-Consultation</p><h1 data-demo-headline>Ask earlier. <em>Arrive prepared.</em></h1><p data-demo-description>Guide the patient through adaptive questions before the visit, then hand the clinician a structured summary.</p><a class="demo-link-v1" href="https://demo-ma-003.huihaohealth.com/pc-cdx/#/app-portal?key=pre-inquiry" target="_blank" rel="noopener" data-demo-link>Open live demo <span>↗</span></a></div><aside class="demo-proof-v1"><small>PROOF SEQUENCE</small><h2 data-demo-proof-title>One interview. Four proof actions.</h2><ol data-demo-steps><li>Capture the patient's concern</li><li>Ask the next useful question</li><li>Structure risk and history</li><li>Deliver a clinician-ready summary</li></ol><p data-demo-note>The interview adapts to each answer while the clinician stays in control.</p></aside></div>
+      </section>
+
+      <section class="slide slide--light slide--case slide--imss" data-page="7" data-label="IMSS localization proof" aria-label="IMSS case study" aria-hidden="true"><div class="case-identity" data-animate="copy"><img src="./assets/branches/mexico/imss-logo.png" alt="IMSS"><div><p>Mexico · Public social-security network</p><h1>Two years of records.<br><em>One reviewable timeline.</em></h1></div></div><figure class="case-visual case-visual--imss" data-animate="media"><img src="./assets/mexico-imss-live.png" alt="Spanish IMSS clinical record and localized CDSA analysis"><figcaption><span>Real Spanish workflow</span><strong>Localization means terminology, workflow and evidence, not translation alone.</strong></figcaption></figure><div class="case-context" data-animate="context"><p>For international context</p><strong>Mexico's national social-security institution</strong><span>Healthcare and social protection across one of Latin America's largest public networks.</span></div><div class="case-metrics" data-animate="metrics"><div><b>78M</b><span>people covered</span></div><div><b>1,700+</b><span>facilities</span></div><div><b>~15 sec</b><span>reported analysis time</span></div></div></section>
+      <section class="slide slide--light slide--case slide--west" data-page="8" data-label="West China operating proof" aria-label="West China Hospital case study" aria-hidden="true"><div class="case-identity" data-animate="copy"><img src="./assets/branches/west-china/assets/west-china-hospital.png" alt="West China Hospital"><div><p>China · National Medical Center</p><h1>Make time visible<br><em>at scale.</em></h1><strong class="case-proof-intro">Documentation AI supported a 4,900-bed clinical operation.</strong></div></div><figure class="case-visual case-visual--video" data-animate="media"><video muted playsinline preload="metadata" poster="./assets/meeting-media/medical-record-generation-poster.jpg" data-case-video data-start="0"><source src="./assets/meeting-media/medical-record-generation.mp4" type="video/mp4"></video><figcaption><span>Real product workflow</span><strong>Consultation → structured draft → clinician review → EMR write-back</strong></figcaption></figure><div class="case-context" data-animate="context"><p>For international context</p><strong>4,900-bed national benchmark hospital</strong><span>7.6M annual outpatient visits · 220K annual surgeries · A++ national performance rating for six consecutive years.</span></div><div class="case-metrics" data-animate="metrics"><div><b>10,000</b><span>records per day</span></div><div><b>2.32M+</b><span>records generated</span></div><div><b>15,584 h</b><span>saved per week</span></div></div></section>
+      <section class="slide slide--light slide--case slide--teda" data-page="9" data-label="TEDA continuity proof" aria-label="TEDA cardiovascular hospital case study" aria-hidden="true"><div class="case-identity" data-animate="copy"><img src="./assets/branches/teda/assets/teda-logo.png" alt="TEDA International Cardiovascular Hospital"><div><p>China · Tertiary cardiovascular specialist hospital</p><h1>One clinical context.<br><em>Seven stages of care.</em></h1></div></div><figure class="case-visual case-visual--video" data-animate="media"><video muted playsinline preload="metadata" poster="./assets/meeting-media/medical-record-quality-poster.jpg" data-case-video data-start="0"><source src="./assets/meeting-media/medical-record-quality.mp4" type="video/mp4"></video><figcaption><span>Whole-hospital continuity</span><strong>Pre-hospital → outpatient → inpatient → surgery → ICU → management → coding and quality</strong></figcaption></figure><div class="case-context" data-animate="context"><p>For international context</p><strong>500-bed cardiac specialty center</strong><span>A whole-hospital cardiovascular model serving more than 300,000 surgery or catheterization patients.</span></div><div class="case-metrics" data-animate="metrics"><div><b>1 sec</b><span>fastest record generation</span></div><div><b>2.7%</b><span>record modification rate</span></div><div><b>~223 h</b><span>saved per week</span></div></div></section>
+      <section class="slide slide--light slide--case slide--qilu" data-page="10" data-label="Qilu high-risk proof" aria-label="Qilu Hospital HeartEngine case study" aria-hidden="true"><div class="case-identity" data-animate="copy"><img src="./assets/branches/qilu/assets/qilu-hospital.png" alt="Qilu Hospital"><div><p>China · University medical center</p><h1>High-risk signals become<br><em>one traceable decision view.</em></h1></div></div><figure class="case-visual case-visual--video" data-animate="media"><video muted playsinline preload="metadata" poster="./assets/meeting-media/qilu-heartengine-en-poster.jpg" data-case-video data-start="0"><source src="./assets/meeting-media/qilu-heartengine-en.mp4" type="video/mp4"></video><figcaption><span>English-subtitled product evidence</span><strong>ECG + biomarkers + vital signs + history → urgent high-risk alerts</strong></figcaption></figure><div class="case-context" data-animate="context"><p>For international context</p><strong>4,360-bed university medical center</strong><span>3.5M+ annual outpatient and emergency visits · pioneer of China's first chest pain center.</span></div><div class="case-metrics" data-animate="metrics"><div><b>97%</b><span>reported accuracy</span></div><div><b>99.8%</b><span>guideline compliance</span></div><div><b>0</b><span>missed high-risk cases reported</span></div></div></section>
+      <section class="slide slide--light slide--breadth" data-page="11" data-label="Proven across real environments" aria-label="Runda deployment breadth" aria-hidden="true"><div class="breadth-copy" data-animate="copy"><p class="eyebrow eyebrow--sage">Not four isolated pilots</p><h1>Proven across<br><em>real clinical environments.</em></h1><div><b>300+</b><span>AI and smart-hospital sites</span></div><div><b>4,000+</b><span>healthcare institutions served</span></div></div><div class="logo-field" data-animate="logos" aria-label="Selected hospital clients"><figure><img src="./assets/clients/pumch.png" alt="Peking Union Medical College Hospital"><figcaption>PUMCH</figcaption></figure><figure><img src="./assets/clients/ruijin-hospital.png" alt="Ruijin Hospital"><figcaption>Ruijin Hospital</figcaption></figure><figure><img src="./assets/clients/changhai-hospital.png" alt="Changhai Hospital"><figcaption>Changhai Hospital</figcaption></figure><figure><img src="./assets/clients/beijing-tiantan-hospital.png" alt="Beijing Tiantan Hospital"><figcaption>Beijing Tiantan</figcaption></figure><figure><img src="./assets/clients/shanghai-sixth-hospital.png" alt="Shanghai Sixth People's Hospital"><figcaption>Shanghai Sixth</figcaption></figure><figure><img src="./assets/clients/hangzhou-first-hospital.png" alt="Hangzhou First People's Hospital"><figcaption>Hangzhou First</figcaption></figure><figure><img src="./assets/clients/beijing-shijitan-hospital.png" alt="Beijing Shijitan Hospital"><figcaption>Beijing Shijitan</figcaption></figure><figure><img src="./assets/clients/nanning-no2-hospital.png" alt="Nanning Second People's Hospital"><figcaption>Nanning No. 2</figcaption></figure></div><p class="breadth-note" data-animate="thesis">Different systems. Different specialties. The same requirement: clinical value that can be inspected and measured.</p></section>
+      <section class="slide slide--light slide--deployment" data-page="12" data-label="Fit the hospital environment" aria-label="Flexible deployment" aria-hidden="true"><div class="deployment-intro" data-animate="copy"><p class="eyebrow eyebrow--blue">Keep the hospital in control</p><h1>Runs inside an <em>approved local environment.</em></h1><p>Connect to the systems the hospital already trusts. Start with one bounded workflow, retain the data boundary, and expand only when the value is proven.</p></div><div class="hospital-system" data-animate="visual" aria-label="Existing hospital systems connect through CDx and clinical agents to one bounded workflow"><header class="hospital-system-head"><p>Approved hospital environment</p><span>Local / Private / Customer-approved</span></header><div class="deployment-flow"><section class="system-sources"><small>Existing systems</small><div class="system-source-grid"><span>HIS</span><span>EMR</span><span>LIS</span><span>RIS</span></div></section><div class="system-link" aria-hidden="true"><i>→</i><small>approved<br>connection</small></div><section class="system-cdx"><small>Governed context</small><strong>CDx</strong><span>Source + time + rules</span></section><div class="system-link" aria-hidden="true"><i>→</i><small>trusted<br>context</small></div><section class="system-agents"><small>Clinical jobs</small><strong>7 Agents</strong><span>Useful work across care</span></section><div class="system-link" aria-hidden="true"><i>→</i><small>start<br>bounded</small></div><section class="system-workflow"><small>First proof</small><strong>One workflow</strong><span>One agreed result</span></section></div><section class="deployment-ownership" aria-label="Delivery ownership"><p>Delivery ownership</p><div><strong>Runda</strong><span>Clinical AI, workflow design and value measurement</span></div><div><strong>Compute partner</strong><span>Infrastructure and technical ecosystem</span></div><div><strong>Local partner</strong><span>Localization, integration and on-site support</span></div><div><strong>Hospital</strong><span>Governance, data scope, users and acceptance</span></div></section><div class="delivery-path" aria-label="Delivery path"><span><b>01</b>Pre-installation validation</span><i aria-hidden="true">→</i><span><b>02</b>Go-live acceptance</span><i aria-hidden="true">→</i><span><b>03</b>Measured value delivery</span></div></div><button class="miu-hotspot" type="button" data-miu-trigger aria-label="Open Medical Intelligence as a Utility"></button></section>
+
+      <section class="slide slide--hybrid slide--poc-v1" data-page="13" data-label="Local proof of concept" aria-label="Local proof of concept" aria-hidden="true"><div class="hybrid-copy hybrid-copy--poc" data-animate="copy"><p class="eyebrow">09 / local proof of concept</p><h1>One workflow. One data scope. <em>One measurable result.</em></h1></div><div class="poc-board-v1" data-animate="visual"><div class="poc-definition-v1"><article><small>01 / WORKFLOW</small><b>Choose the task</b><span>One real care or documentation workflow</span></article><article><small>02 / DATA</small><b>Define the boundary</b><span>Approved sources, access and residency</span></article><article><small>03 / USERS</small><b>Name the participants</b><span>Clinical owners, IT owners and active users</span></article><article><small>04 / SUCCESS</small><b>Agree before testing</b><span>Clear measures and acceptance criteria</span></article></div><div class="poc-lower-v1"><section><small>ACCEPTANCE MEASURES</small><h2>Measure more than "it runs"</h2><p>Clinical value · Time saved · Quality · Adoption · Integration · Local adaptation</p></section><section><small>DECISION PATH</small><h2>A bounded route to a local decision</h2><p class="poc-path-v1"><span>Select</span><i>→</i><span>Connect</span><i>→</i><span>Validate</span><i>→</i><span>Decide</span></p></section></div></div></section>
+
+      <section class="slide slide--hybrid slide--discussion-v1" data-page="14" data-label="Discussion" aria-label="Discussion" aria-hidden="true"><div class="discussion-v1-layout"><header data-animate="copy"><p class="eyebrow">10 / discussion</p><h1>Where should we <em>prove value first?</em></h1><p>One workflow · One proof · One decision</p></header><div class="question-grid-v1" data-animate="visual"><article><b>01</b><span>Which workflow creates the most avoidable work today?</span></article><article><b>02</b><span>What would make clinical teams trust or reject AI support?</span></article><article><b>03</b><span>What evidence would clinical, IT and leadership need to approve a POC?</span></article><article><b>04</b><span>Would you be open to defining one local proof together?</span></article></div></div></section>
+    </main>
+  </div>
+
+  <aside class="miu-overlay" data-miu-overlay hidden aria-label="Medical Intelligence as a Utility" aria-modal="true" role="dialog">
+    <div class="miu-panel"><button class="miu-close" type="button" data-miu-close aria-label="Close Medical Intelligence as a Utility">×</button><p>MIU / COMMERCIAL MODEL</p><h2>Medical Intelligence as a <em>Utility</em></h2><span>Choose the commercial structure that matches the hospital's operating model.</span><div><article><small>01</small><h3>Per-agent one-time licence</h3><p>Licence selected clinical agents, then expand the portfolio as priorities grow.</p></article><article><small>02</small><h3>MIU utility model</h3><p>Consume governed medical intelligence by agreed capacity, usage volume or service scale.</p></article></div></div>
+  </aside>
+
+  <script src="./scripts/atlas-matrix.js?v=20260810-12"></script>
+  <script src="./scripts/hybrid-deck.js?v=20260810-03"></script>
+</body>
+</html>

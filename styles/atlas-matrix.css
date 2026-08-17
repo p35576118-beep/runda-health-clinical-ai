@@ -1,0 +1,601 @@
+.atlas-matrix {
+  --family: var(--accent);
+  --family-deep: var(--accent-deep);
+  --family-soft: var(--accent-soft);
+  --family-wash: #e0ece8;
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 88px minmax(0, 1fr) 116px;
+  overflow: hidden;
+  background: #e9efed;
+}
+
+.atlas-matrix[data-family="during"] {
+  --family: var(--blue);
+  --family-deep: #355f71;
+  --family-soft: var(--blue-soft);
+  --family-wash: #e2eaed;
+}
+
+.atlas-matrix[data-family="after"] {
+  --family: var(--sage);
+  --family-deep: #50694a;
+  --family-soft: var(--sage-soft);
+  --family-wash: #e4ebe1;
+}
+
+.atlas-matrix button {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+}
+
+.atlas-matrix button:not(:disabled) { cursor: pointer; }
+.atlas-matrix button:disabled { cursor: default; opacity: 0.28; }
+
+.atlas-matrix .stage-toolbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(244, 247, 245, 0.86);
+}
+
+.atlas-matrix .chapter-marker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.atlas-matrix .chapter-marker > span {
+  color: var(--family);
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.atlas-matrix .chapter-marker p {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+}
+
+.atlas-matrix .chapter-marker strong {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.atlas-matrix .chapter-marker small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.atlas-matrix .stage-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atlas-matrix .stage-actions p {
+  margin: 0 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.atlas-matrix .stage-actions button {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  font-size: 21px;
+  line-height: 1;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms var(--ease);
+}
+
+.atlas-matrix .stage-actions button:not(:disabled):hover {
+  color: var(--white);
+  background: var(--family-deep);
+  transform: translateY(-2px);
+}
+
+.atlas-matrix .stage-body {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: 610px minmax(0, 1fr);
+  gap: 30px;
+  padding: 30px 24px 28px;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--family-wash) 0 34%, #e9efed 34% 100%);
+}
+
+.atlas-matrix .chapter-copy {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  padding: 12px 18px 6px 22px;
+}
+
+.atlas-matrix .chapter-eyebrow {
+  margin: 0 0 14px;
+  color: var(--family-deep);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.atlas-matrix .chapter-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.atlas-matrix .chapter-description {
+  max-width: 46ch;
+  margin: 22px 0 0;
+  color: var(--body);
+  font-size: 20px;
+  line-height: 1.48;
+}
+
+.atlas-matrix .product-selector {
+  display: grid;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.atlas-matrix .product-selector button {
+  position: relative;
+  display: grid;
+  min-height: 62px;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: var(--body);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms var(--ease);
+}
+
+.atlas-matrix .product-selector button::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 3px;
+  background: var(--family);
+  content: "";
+  opacity: 0;
+  transform: scaleY(0.35);
+  transition: opacity 180ms ease, transform 220ms var(--ease);
+}
+
+.atlas-matrix .product-selector button:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.atlas-matrix .product-selector button.is-active {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.atlas-matrix .product-selector button.is-active::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.atlas-matrix .product-selector span {
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.atlas-matrix .product-selector strong {
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-matrix .product-selector small {
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.atlas-matrix .product-showcase {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: auto auto minmax(310px, 1fr) auto;
+  overflow: hidden;
+  padding: 24px 0 0;
+  border: 0;
+  border-top: 2px solid var(--family);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.atlas-matrix .showcase-head,
+.atlas-matrix .showcase-head p {
+  display: flex;
+  align-items: center;
+}
+
+.atlas-matrix .showcase-head {
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.atlas-matrix .showcase-head p {
+  gap: 12px;
+  margin: 0;
+}
+
+.atlas-matrix .showcase-head p span,
+.atlas-matrix .showcase-head p small,
+.atlas-matrix .review-label {
+  font-size: 14px;
+}
+
+.atlas-matrix .showcase-head p span {
+  color: var(--family-deep);
+  font-weight: 800;
+}
+
+.atlas-matrix .showcase-head p small {
+  color: var(--muted);
+}
+
+.atlas-matrix .review-label {
+  padding: 7px 0 7px 26px;
+  color: var(--family-deep);
+  background: linear-gradient(90deg, transparent 0 12px, var(--family) 12px 17px, transparent 17px);
+  font-weight: 800;
+}
+
+.atlas-matrix .showcase-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
+  align-items: end;
+  gap: 36px;
+  padding: 20px 0 18px;
+}
+
+.atlas-matrix .showcase-copy h2 {
+  max-width: 16ch;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.atlas-matrix .showcase-copy p {
+  max-width: 43ch;
+  margin: 0;
+  color: var(--body);
+  font-size: 19px;
+  line-height: 1.44;
+}
+
+.atlas-matrix .showcase-visual {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(17, 48, 41, 0.14);
+  background: #dfebe8;
+  border-radius: 4px;
+}
+
+.atlas-matrix .product-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  margin: 0;
+  overflow: hidden;
+  background: #dbe8e5;
+}
+
+.atlas-matrix .product-media::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: var(--media-poster);
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+.atlas-matrix .product-media img,
+.atlas-matrix .product-media video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  object-position: center top;
+  background: transparent;
+}
+
+.atlas-matrix .product-media video {
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
+.atlas-matrix .product-media video[data-atlas-ready="false"] { opacity: 0; }
+
+.atlas-matrix .product-media--cropped video {
+  transform: scale(1.08);
+  transform-origin: center top;
+}
+
+.atlas-matrix .product-media--portrait::before {
+  position: absolute;
+  z-index: 0;
+  inset: -32px;
+  background-image: linear-gradient(rgba(235, 242, 240, 0.22), rgba(235, 242, 240, 0.32)), var(--media-poster);
+  background-position: center;
+  background-size: cover;
+  content: "";
+  filter: blur(22px);
+  opacity: 0.78;
+  transform: scale(1.12);
+}
+
+.atlas-matrix .product-media--portrait video,
+.atlas-matrix .product-media--portrait img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.atlas-matrix .product-media::after {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(17, 33, 30, 0.74));
+  content: "";
+  pointer-events: none;
+}
+
+.atlas-matrix .product-media__evidence {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 20px;
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.95);
+  border-left: 3px solid var(--family);
+  background: rgba(15, 36, 32, 0.72);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.atlas-matrix .product-media figcaption {
+  position: absolute;
+  z-index: 3;
+  right: 24px;
+  bottom: 20px;
+  left: 24px;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.atlas-matrix .signal-visual {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  grid-template-columns: minmax(390px, 1.2fr) minmax(260px, 0.8fr);
+  grid-template-rows: 1fr auto;
+  gap: 24px 30px;
+  align-items: center;
+  padding: 34px;
+  color: var(--family-deep);
+  background: var(--family-soft);
+  border-radius: var(--radius-md);
+}
+
+.atlas-matrix .signal-nodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.atlas-matrix .signal-nodes span {
+  display: grid;
+  min-height: 112px;
+  place-items: center;
+  padding: 12px;
+  color: var(--family-deep);
+  background: rgba(255, 255, 255, 0.64);
+  font-size: 14px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+}
+
+.atlas-matrix .signal-trace {
+  display: flex;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.48);
+  border-radius: var(--radius-sm);
+}
+
+.atlas-matrix .signal-trace i {
+  width: 4px;
+  height: calc(24px + (var(--bar-index) * 7px));
+  max-height: 80px;
+  background: var(--family);
+  opacity: calc(0.34 + (var(--bar-index) * 0.08));
+  transform-origin: center;
+}
+
+.atlas-matrix .signal-visual > p {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(17, 48, 41, 0.14);
+}
+
+.atlas-matrix .signal-visual > p span,
+.atlas-matrix .signal-visual > p strong {
+  font-size: 14px;
+}
+
+.atlas-matrix .signal-visual > p span { color: var(--muted); }
+.atlas-matrix .signal-visual > p strong { color: var(--family-deep); }
+
+.atlas-matrix .clinical-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding-top: 18px;
+}
+
+.atlas-matrix .clinical-flow div {
+  min-width: 0;
+  padding: 0 20px;
+  border-left: 1px solid var(--line);
+}
+
+.atlas-matrix .clinical-flow div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.atlas-matrix .clinical-flow div:last-child { padding-right: 0; }
+
+.atlas-matrix .clinical-flow dt {
+  margin-bottom: 7px;
+  color: var(--family-deep);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.atlas-matrix .clinical-flow dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.38;
+}
+
+.atlas-matrix .chapter-navigation {
+  position: relative;
+  z-index: 3;
+  padding: 14px 24px 20px;
+  border-top: 1px solid var(--line);
+  background: var(--family-wash);
+}
+
+.atlas-matrix .chapter-tabs {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.atlas-matrix .chapter-tab {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 4px 10px;
+  padding: 12px 16px;
+  color: var(--body);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms var(--ease);
+}
+
+.atlas-matrix .chapter-tab:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.atlas-matrix .chapter-tab.is-active {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.atlas-matrix .chapter-tab::after {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  left: 64px;
+  height: 2px;
+  background: var(--family);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.2);
+  transform-origin: left;
+  transition: opacity 180ms ease, transform 260ms var(--ease);
+}
+
+.atlas-matrix .chapter-tab.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.atlas-matrix .chapter-tab span {
+  grid-row: 1 / -1;
+  align-self: center;
+  color: var(--family);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.atlas-matrix .chapter-tab strong {
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-matrix .chapter-tab small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media print {
+  .atlas-matrix .stage-body,
+  .atlas-matrix .product-showcase {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
